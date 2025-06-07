@@ -12,12 +12,10 @@ using UnityEngine;
 
 namespace SPTVRAMCleaner.Patches
 {
-    internal class VRAMCleaner : ModulePatch // all patches must inherit ModulePatch
+    internal class VRAMCleaner : ModulePatch 
     {
         protected override MethodBase GetTargetMethod()
         {
-            // one way methods can be patched is by targeting both their class name and the name of the method itself
-            // the example in this patch is the Jump() method in the Player class
             return AccessTools.Method(typeof(Player), nameof(Player.VisualPass));
         }
         
@@ -33,7 +31,7 @@ namespace SPTVRAMCleaner.Patches
 
             if (_hasCountdownFinished && Time.realtimeSinceStartup >= _countdownFinishedTime + DelaySeconds)
             {
-                _hasCountdownFinished = false; // reset or prevent re-running
+                _hasCountdownFinished = false;
                 _countdownFinishedTime = -1f;
 
                 GC.Collect();
