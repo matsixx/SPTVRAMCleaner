@@ -24,6 +24,7 @@ namespace SPTVRAMCleaner
             Logger.LogInfo("VRAMCleaner loaded!");
 
             new VRAMCleaner().Enable();
+            new VRAMCleanerReset().Enable();
         }
     }
 }
