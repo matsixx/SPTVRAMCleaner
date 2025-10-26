@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace SPTVRAMCleaner
 {
-    [BepInPlugin("com.matsix.SPTVRAMCleaner", "SPTVRAMCleaner-matsix", "1.0.3")]
+    [BepInPlugin("com.matsix.sptvramcleaner", "SPTVRAMCleaner-matsix", "1.0.3")]
     public class Plugin : BaseUnityPlugin
     {
 
